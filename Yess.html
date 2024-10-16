@@ -86,6 +86,15 @@ noButton.addEventListener('click', () => {
     heading.textContent = "Are you Sure! ";
     subheading.textContent = `Please click "Yes" now.`;
     yesButton.style.display = "inline-block";
+    yesButton.addEventListener('mouseover', () => {
+  yesButton.style.backgroundColor = '#45a049'; // Darker green on hover
+  yesButton.style.transform = 'scale(1.05)'; // Slightly enlarge button on hover
+});
+
+yesButton.addEventListener('mouseout', () => {
+  yesButton.style.backgroundColor = '#4CAF50'; // Reset to original color
+  yesButton.style.transform = 'scale(1)'; // Reset to original size
+});
     moveInterval = setInterval(moveButton, 500); // Call moveButton every 500ms
   }
 });
